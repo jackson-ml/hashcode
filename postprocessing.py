@@ -4,7 +4,9 @@ from book_order import get_book_order
 
 
 def write_out(output_file, library_order, book_order):
-    book_order_strings = [' '.join(str(book) for book in i) for i in book_order]
+    book_order_strings = {lib_id: ' '.join(str(book) for book in book_order) for lib_id,
+                                                                book_order in
+                          book_order.items()}
     lines = [str(len(library_order))]
     for lib in library_order:
         first_line = f'{lib.lib_id} {len(lib)}'

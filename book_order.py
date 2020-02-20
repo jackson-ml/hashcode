@@ -2,7 +2,7 @@ from score_libraries import *
 
 
 def get_book_order(library_order, book_scores):
-    book_order = []
+    book_order = {}
     scanned_books = set()
 
     for library in library_order:
@@ -19,7 +19,7 @@ def get_book_order(library_order, book_scores):
         sorted_book_order.extend(list(duplicated_books))
         scanned_books = scanned_books.union(set(sorted_book_order))
         
-        book_order.append(sorted_book_order)
+        book_order[library.lib_id] = sorted_book_order
 
     return book_order
 
