@@ -14,8 +14,8 @@ class Library:
         self.rate = rate
 
 
-def parse_input_file(input):
-    with open(input) as input_file:
+def parse_input_file(input_file):
+    with open(input_file) as input_file:
         bld_string = input_file.readline()
         bld_list = bld_string.split()
         b = int(bld_list[0])

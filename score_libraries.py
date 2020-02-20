@@ -1,5 +1,5 @@
 from parse_data import parse_input_file, Library
-
+import sys
 
 def unique_books_per_day(library: Library, book_scores, days_left,
                          existing_books):
@@ -17,8 +17,8 @@ def library_score_over_signup(library: Library, book_scores, days_left,
                                 existing_books) / library.signup
 
 
-def get_library_order(input):
-    b, l, d, book_scores, libraries = parse_input_file(input)
+def get_library_order(input_file):
+    b, l, d, book_scores, libraries = parse_input_file(input_file)
     days_left = d
     library_order = []
     existing_books = set()
@@ -33,3 +33,6 @@ def get_library_order(input):
         existing_books.union(set(next_library.books))
     return library_order
 
+
+if __name__ == "__main__":
+    print(get_library_order(sys.argv[0]))
