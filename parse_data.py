@@ -2,7 +2,7 @@
 
 class Library:
     def __len__(self):
-        len(self.books)
+        return len(self.books)
 
     def __str__(self):
         return str(self.lib_id)

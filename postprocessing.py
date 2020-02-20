@@ -12,7 +12,7 @@ def write_out(output_file, library_order, book_order):
         lines.append(first_line)
         lines.append(second_line)
     with open(output_file, 'w') as out:
-        out.writelines(lines)
+        out.write("\n".join(lines))
 
 
 if __name__ == "__main__":
