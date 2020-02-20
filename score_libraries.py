@@ -38,7 +38,7 @@ def get_library_order(input_file):
         libraries.remove(next_library)
         days_left -= next_library.signup
         existing_books.union(set(next_library.books))
-    return library_order
+    return library_order, book_scores
 
 
 if __name__ == "__main__":
