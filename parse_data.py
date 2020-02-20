@@ -27,7 +27,7 @@ def parse_input_file(input):
         for i in range(l):
             size_signup_and_rate = [int(i) for i in input_file.readline().split()]
             books = [int(i) for i in input_file.readline().split()]
-            library = Library(i+1, books, size_signup_and_rate[1],
+            library = Library(i, books, size_signup_and_rate[1],
                               size_signup_and_rate[2])
             libraries.append(library)
         return b, l, d, book_scores, libraries
