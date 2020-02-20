@@ -1,8 +1,7 @@
 from score_libraries import *
 
 
-def get_book_order(input_file):
-    library_order, book_scores = get_library_order(input_file)
+def get_book_order(library_order, book_scores):
     book_order = []
     scanned_books = set()
 
@@ -26,4 +25,5 @@ def get_book_order(input_file):
 
 
 if __name__ == "__main__":
-    print(get_book_order(sys.argv[1]))
+    library_order, book_scores = get_library_order(sys.argv[1])
+    print(get_book_order(library_order, book_scores))
