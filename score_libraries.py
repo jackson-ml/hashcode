@@ -42,4 +42,4 @@ def get_library_order(input_file):
 
 
 if __name__ == "__main__":
-    print([library.lib_id for library in get_library_order(sys.argv[1])])
+    print([library.lib_id for library in get_library_order(sys.argv[1])[0]])
