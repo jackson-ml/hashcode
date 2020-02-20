@@ -5,10 +5,10 @@ class Library:
         len(self.books)
 
     def __str__(self):
-        return id
+        return str(self.lib_id)
 
-    def __init__(self, id, books, signup, rate):
-        self.id = id
+    def __init__(self, lib_id, books, signup, rate):
+        self.lib_id = lib_id
         self.books = books
         self.signup = signup
         self.rate = rate

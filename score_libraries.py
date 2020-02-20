@@ -22,6 +22,8 @@ def get_library_order(input_file):
     days_left = d
     library_order = []
     existing_books = set()
+    for library in libraries:
+        print(library)
     while days_left > 0:
         viable_libraries = [i for i in libraries if i.signup >= days_left]
         if not viable_libraries:
@@ -35,4 +37,4 @@ def get_library_order(input_file):
 
 
 if __name__ == "__main__":
-    print(get_library_order(sys.argv[0]))
+    print(get_library_order(sys.argv[1]))
