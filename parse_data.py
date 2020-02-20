@@ -25,3 +25,4 @@ def parse_input_file(input):
             library = Library(books, size_signup_and_rate[1],
                               size_signup_and_rate[2])
             libraries.append(library)
+        return b, l, d, book_scores, libraries

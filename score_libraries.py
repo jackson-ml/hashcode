@@ -9,3 +9,7 @@ def unique_books_per_day(library: Library, book_scores, days_left,
     unique_books.sort(key=lambda x: book_scores[x], reverse=True)
     scannable_books = unique_books[:books_scanned]
     return sum(book_scores[i] for i in scannable_books)/days_after_signup
+
+
+def get_library_order(input):
+    b, l, d, book_scores, libraries = parse_input_file(input)
